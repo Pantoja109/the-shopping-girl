@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactComponent as Icon } from "../assets/svg/shopping-girl-icon.svg";
-import { FaBars } from "react-icons/fa";
+import { FaUserAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export function Header() {
@@ -11,7 +11,7 @@ export function Header() {
           <Icon width="100" height="58" className="fill-current" />
         </Link>
         <Link to={"/profile"}>
-          <FaBars className="text-2xl" />
+          <FaUserAlt className="text-2xl" />
         </Link>
       </nav>
     </header>
