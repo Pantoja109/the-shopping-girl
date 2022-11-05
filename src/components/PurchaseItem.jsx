@@ -18,7 +18,7 @@ export function PurchaseItem({ purchase, id }) {
     fechaCompra.getFullYear();
   return (
     <div>
-      <div className="bg-purple-300 rounded-xl py-4 pl-12 pr-8 h-52">
+      <div className="bg-purple-300 rounded-xl py-4 px-8 h-52">
         <div className="h-full grid grid-rows-6 grid-cols-4">
           <div className="col-span-4">
             <article className="text-lg flex justify-center items-center">
@@ -42,7 +42,7 @@ export function PurchaseItem({ purchase, id }) {
             <p className="ml-2 font-medium text-sm">Precio:</p>
           </article>
           <p className="flex items-center font-medium text-sm place-self-center col-span-2">
-            $ {purchase.price}
+            $ {purchase.price.toFixed(2)}
           </p>
           {/* Total */}
           <article className="flex items-center justify-start col-span-2">
@@ -50,7 +50,7 @@ export function PurchaseItem({ purchase, id }) {
             <p className="ml-2 font-medium text-sm">Total:</p>
           </article>
           <p className="font-medium text-sm place-self-center col-span-2">
-            $ {purchase.total}
+            $ {purchase.total.toFixed(2)}
           </p>
           {/* Payments */}
           <article className="flex items-center justify-start col-span-2">

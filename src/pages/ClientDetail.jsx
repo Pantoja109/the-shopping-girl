@@ -4,11 +4,10 @@ import {
   FaFacebook,
   FaInstagram,
   FaWhatsapp,
-  FaShoppingBag,
-  FaEdit,
   FaUserEdit,
 } from "react-icons/fa";
 import { TbShoppingCartPlus } from "react-icons/tb";
+import { IoBagAddSharp } from "react-icons/io5";
 import {
   getDoc,
   doc,
@@ -72,20 +71,20 @@ export function ClientDetail() {
   }
   return (
     <div className="w-full">
-      <div className="grid rounded-2xl grid-rows-3 grid-flow-col bg-base-200 shadow-xl hover:shadow-inner">
+      <div className="grid rounded-2xl grid-rows-3 grid-flow-col bg-base-200 shadow-xl">
         <div className="ml-6 my-4 row-span-3">
           <h2 className="card-title tracking-wider">
             {client.firstName} {client.lastName}
           </h2>
-          <span className="flex items-center mt-4">
+          <div className="flex items-center mt-4">
             <FaWhatsapp className="text-lg" />
             <a href={`https://wa.me/${client.phone}`} target="_blank">
               <p className="text-base-400 text-sm tracking-widest ml-2 font-semibold">
                 {client.phone}
               </p>
             </a>
-          </span>
-          <span className="flex items-center mt-4">
+          </div>
+          <div className="flex items-center mt-4">
             <FaInstagram className="text-lg" />
             <a
               href={`https://www.instagram.com/${client.instagram}`}
@@ -95,8 +94,8 @@ export function ClientDetail() {
                 @{client.instagram}
               </p>
             </a>
-          </span>
-          <span className="flex items-center mt-4">
+          </div>
+          <div className="flex items-center mt-4">
             <FaFacebook className="text-lg" />
             <a
               href={`https://www.facebook.com/${client.facebook}`}
@@ -106,7 +105,7 @@ export function ClientDetail() {
                 /{client.facebook}
               </p>
             </a>
-          </span>
+          </div>
         </div>
         <div className="my-4 text-2xl row-span-3 flex flex-col justify-between items-center">
           <FaUserEdit />
@@ -118,7 +117,12 @@ export function ClientDetail() {
       {/* Ventas */}
       {purchases.length > 0 ? (
         <div className="mt-8">
-          <p className="text-xl font-semibold">Compras:</p>
+          <div className="flex justify-between items-center">
+            <p className="text-xl font-semibold">Compras:</p>
+            <button className="btn btn-secondary">
+              <IoBagAddSharp className="text-xl" />
+            </button>
+          </div>
           <ul className="mt-6 grid grid-cols-1 gap-y-4">
             {purchases.map((purchase) => (
               <PurchaseItem
