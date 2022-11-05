@@ -10,7 +10,9 @@ export function Header() {
         <Link to="/" className="w-30">
           <Icon width="100" height="58" className="fill-current" />
         </Link>
-        <FaBars className="text-2xl" />
+        <Link to={"/profile"}>
+          <FaBars className="text-2xl" />
+        </Link>
       </nav>
     </header>
   );

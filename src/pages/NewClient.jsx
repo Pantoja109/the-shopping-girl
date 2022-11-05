@@ -34,7 +34,7 @@ export function NewClient() {
     const docRef = await addDoc(collection(db, "clients"), formDataCopy);
     setLoading(false);
     toast.success("Cliente creado!");
-    // navigate(`/client/${docRef.id}`);
+    navigate(`/clientes/${docRef.id}`);
   };
 
   const onMutate = (e) => {

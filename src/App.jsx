@@ -12,6 +12,7 @@ import { NewClient } from "./pages/NewClient";
 import "react-toastify/dist/ReactToastify.css";
 import { ClientDetail } from "./pages/ClientDetail";
 import { NewPurchase } from "./pages/NewPurchase";
+import { Profile } from "./pages/Profile";
 
 export function App() {
   return (
@@ -29,6 +30,7 @@ export function App() {
                 path="/clientes/:clientId/add-purchase"
                 element={<NewPurchase />}
               />
+              <Route path="/profile" element={<Profile />} />
               <Route path="/sign-in" element={<SignIn />} />
               <Route path="/sign-up" element={<SignUp />} />
               <Route path="/new-client" element={<NewClient />} />
