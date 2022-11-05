@@ -12,28 +12,16 @@ export function ClientItem({ client, id }) {
             </Link>
           </h3>
           <div className="mt-4 ml-4 mb-4">
-            <a
-              className="flex text-sm mb-2"
-              href={`https://wa.me/${client.phone}`}
-              target="_blank"
-            >
+            <div cldivssName="flex text-sm mb-2">
               <FaWhatsapp className="text-lg" />
               {client.phone}
-            </a>
-            <a
-              className="flex text-sm mb-2"
-              href={`https://www.instagram.com/${client.instagram}`}
-              target="_blank"
-            >
+            </div>
+            <div className="flex text-sm mb-2">
               <FaInstagram className="text-lg" />@{client.instagram}
-            </a>
-            <a
-              className="flex text-sm mb-2"
-              href={`https://www.facebook.com/${client.facebook}`}
-              target="_blank"
-            >
+            </div>
+            <div className="flex text-sm mb-2">
               <FaFacebook className="text-lg" />/{client.facebook}
-            </a>
+            </div>
           </div>
         </div>
       </div>
