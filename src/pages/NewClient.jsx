@@ -4,7 +4,7 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase.config";
 import { useNavigate } from "react-router-dom";
 import { Spinner } from "../components/Spinner";
-import { v4 as uuidv4 } from "uuid";
+import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 export function NewClient() {
@@ -102,6 +102,12 @@ export function NewClient() {
             className="btn btn-primary text-lg font-bold mt-16"
           >
             Guardar
+          </button>
+          <button
+            type="button"
+            className="btn btn-secondary text-lg font-bold mt-2"
+          >
+            <Link to={"/"}>Cancelar</Link>
           </button>
         </form>
       </div>

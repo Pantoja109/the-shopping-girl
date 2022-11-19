@@ -8,7 +8,6 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebase.config";
 import { Spinner } from "../components/Spinner";
-import { v4 as uuidv4 } from "uuid";
 import { toast } from "react-toastify";
 
 export function NewPurchase() {
@@ -56,7 +55,7 @@ export function NewPurchase() {
       purchaseAt: new Timestamp(dateFormat(purchaseAt) / 1000, 0),
       total: price * quantity,
     };
-    console.log("formDataCopy", formDataCopy);
+    //console.log("formDataCopy", formDataCopy);
 
     const docRef = await addDoc(collection(db, "sales"), formDataCopy);
     setLoading(false);
@@ -156,7 +155,7 @@ export function NewPurchase() {
             </div>
           </div>
 
-          {isSetAside === "true" ? (
+          {isSetAside === true ? (
             <input
               className="input w-full input-primary mt-6"
               type="number"
@@ -183,7 +182,7 @@ export function NewPurchase() {
                   type="radio"
                   name="freeShipping"
                   id="freeShipping"
-                  class="radio radio-primary"
+                  className="radio radio-primary"
                   value={true}
                   onClick={onMutate}
                 />
@@ -198,7 +197,7 @@ export function NewPurchase() {
                 <input
                   type="radio"
                   name="freeShipping"
-                  class="radio radio-primary"
+                  className="radio radio-primary"
                   id="freeShipping"
                   value={false}
                   onClick={onMutate}

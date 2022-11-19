@@ -120,7 +120,9 @@ export function ClientDetail() {
           <div className="flex justify-between items-center">
             <p className="text-xl font-semibold">Compras:</p>
             <button className="btn btn-secondary">
-              <IoBagAddSharp className="text-xl" />
+              <Link to={`/clientes/${params.clientId}/add-purchase`}>
+                <IoBagAddSharp className="text-xl" />
+              </Link>
             </button>
           </div>
           <ul className="mt-6 grid grid-cols-1 gap-y-4">

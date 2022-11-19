@@ -7,9 +7,9 @@ import {
   FaMoneyBillAlt,
 } from "react-icons/fa";
 export function PurchaseItem({ purchase, id }) {
-  console.log(purchase.purchaseAt);
+  //console.log(purchase.purchaseAt);
   const fechaCompra = new Date(purchase.purchaseAt.seconds * 1000);
-  console.log("fechaCompra", fechaCompra);
+  //console.log("fechaCompra", fechaCompra);
   const fechaFormated =
     fechaCompra.getDate() +
     "/" +

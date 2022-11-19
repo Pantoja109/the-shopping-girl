@@ -12,7 +12,7 @@ export function ClientItem({ client, id }) {
             </Link>
           </h3>
           <div className="mt-4 ml-4 mb-4">
-            <div cldivssName="flex text-sm mb-2">
+            <div className="flex flex-row text-sm mb-2">
               <FaWhatsapp className="text-lg" />
               {client.phone}
             </div>
